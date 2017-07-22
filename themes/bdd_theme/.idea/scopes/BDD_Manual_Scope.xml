@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="BDD_Manual_Scope" pattern="file[bdd_theme]:scss/*" />
+</component>

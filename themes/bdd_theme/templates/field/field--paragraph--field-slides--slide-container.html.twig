@@ -1,0 +1,28 @@
+{% set classes = ['carousel', 'slide'] %}
+<div{{ attributes.addClass(classes) }} data-ride="carousel" data-interval="{{ interval }}" data-pause="{{ pause }}" data-wrap="{{ wrap }}">
+    {% if indicators %}
+        {{ indicators }}
+    {% endif %}
+    <div class="carousel-inner" role="listbox">
+        {% for slide in slides %}
+            {% set slide_classes = ['item', start_index == loop.index0 ? 'active'] %}
+            <div{{ slide.attributes.addClass(slide_classes) }}>
+                {{ slide.image }}
+                {% if slide.title or slide.description %}
+                    <div class="carousel-caption">
+                        {% if slide.title %}
+                            <h3>{{ slide.title }}</h3>
+                        {% endif %}
+                        {% if slide.description %}
+                            <p>{{ slide.description }}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    {% if controls %}
+        {{ controls.left }}
+        {{ controls.right }}
+    {% endif %}
+</div>
