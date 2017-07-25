@@ -4,11 +4,16 @@ $background-dark: #000319
 $highlight-bright: #FFAB00
 
 //Front slider
-#myCarousel-10 > div > div > div > div > div
-  max-height: 300px
-  z-index: -5
-  img
-    min-width: 100%
+#myCarousel-10
+  div > div > div > div > div
+    height: 300px
+    z-index: -5
+    img
+      min-width: 100%
+      min-height: 300px
+  ol.carousel-indicators
+    display: none
+
 
 //Branding bar with logo and search bar
 body > div.dialog-off-canvas__main-canvas > div.row.row-branding
@@ -26,6 +31,12 @@ body > div.dialog-off-canvas__main-canvas > div.row.row-branding
       vertical-align: text-top
 
 
+#navbar
+  margin-bottom: 0px
+  #navbar-collapse
+    padding-right: 20px
+
+
 nav
   ul
     z-index: 3
@@ -35,4 +46,7 @@ nav
       background-color: $background-dark
 
 
-
+.footer
+  background-color: $background-dark
+  padding-top: 0px
+  padding-bottom: 0px

@@ -106,6 +106,8 @@
     {% endblock %}
 {% endif %}
 
+{{ page.slider }}
+
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 
 {# Main #}
@@ -189,9 +191,17 @@
     </div>
 {% endblock %}
 
+{#Take the footer out of a containter#}
+{#{% if page.footer %}#}
+    {#{% block footer %}#}
+        {#<footer class="footer {{ container }}" role="contentinfo">#}
+            {#{{ page.footer }}#}
+        {#</footer>#}
+    {#{% endblock %}#}
+{#{% endif %}#}
 {% if page.footer %}
     {% block footer %}
-        <footer class="footer {{ container }}" role="contentinfo">
+        <footer class="footer" role="contentinfo">
             {{ page.footer }}
         </footer>
     {% endblock %}

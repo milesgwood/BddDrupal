@@ -10,6 +10,7 @@ regions:
   branding: 'Branding'
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  slider: 'Slider'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
